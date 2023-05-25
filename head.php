@@ -16,6 +16,7 @@
             if( isset($_SESSION["username"])) $username = $_SESSION["username"];
             else $username = "";
             
+            
             if( $userid == ""){ ?>
                 <div style="position: relative; left: 30%; display:inline; height:20px;">
                     <a href="signup.php"><button>회원가입</button></a> &nbsp;

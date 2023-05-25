@@ -27,7 +27,7 @@
                         <div class="cn" ><?= $board["content"]?></div>
                     </tbody>
                     <tfoot>
-                        <div class="un"> 작성자 : <?= $board["name"]?>[id:<?= $board["id"]?>]</div>
+                        <div class="un"> 작성자 : <?= $board["name"]?> [ id : <?= $board["id"]?> ]</div>
                         <div class="un"> 작성일자 : <?= $board["date"]?></div>
                         <hr >
                     </tfoot>

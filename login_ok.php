@@ -5,22 +5,22 @@
     </head>
     <body>
         <?php
-            $mode = $_POST["btn"];
             $id = $_POST['id'];
             $passwd = $_POST['passwd'];
+            $isOk = true;
 
             $connect = new mysqli("localhost", "root", "", "board_site");
             $sql = "SELECT * FROM signup where id='$id'";
             $result = mysqli_query($connect, $sql);
 
-            $num_match = mysqli_num_rows($result);
+            $id_match = mysqli_num_rows($result);
 
-            if($mode =="로그인" && $connect){
-                if( !$num_match ){
+            if( !$connect->connect_errno ){
+                if( !$id_match ){
                     echo "
                     <script>
-                    window.alert('등록되지 않은 아이디입니다.');
-                         history.go(-1);
+                        window.alert('등록되지 않은 아이디입니다.');
+                        history.go(-1);
                     </script>";
                 }
                 else{

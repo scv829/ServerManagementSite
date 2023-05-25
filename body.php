@@ -38,7 +38,7 @@
             <?php 
                 if( isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
                 else $userid = "";
-                if( isset($_SESSION["username"])) $userid = $_SESSION["username"];
+                if( isset($_SESSION["username"])) $username = $_SESSION["username"];
                 else $username = "";
 
                 if( $userid != "" ) echo "<a href='write.php'><button>글쓰기</button></a>";

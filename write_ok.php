@@ -14,7 +14,7 @@
 
             $connect = new mysqli("localhost", "root", "", "board_site");
 
-            if($connect){
+            if(!$connect->connect_errno){
                 $sql = "INSERT INTO post(id,name,title,content,date) VALUES('$id','$name', '$title','$content','$date')";
                 mysqli_query($connect, $sql);
                 mysqli_close($connect);
